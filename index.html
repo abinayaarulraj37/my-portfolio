@@ -71,6 +71,50 @@
             <p>&copy; 2026 Abinaya | Personal Portfolio</p>
             <p>Designed with ❤️ using HTML & CSS</p>
         </footer>
+        <script>
+const roles = [
+  "an ECE Student",
+  "learning Java",
+  "exploring Embedded Systems",
+  "learning Web Development"
+];
+
+const typingElement = document.getElementById("typing-text");
+
+let roleIndex = 0;
+let charIndex = 0;
+let deleting = false;
+
+function typeEffect() {
+  const currentRole = roles[roleIndex];
+
+  if (!deleting) {
+    charIndex++;
+    typingElement.textContent =
+      currentRole.substring(0, charIndex);
+
+    if (charIndex === currentRole.length) {
+      deleting = true;
+      setTimeout(typeEffect, 1200);
+      return;
+    }
+  } else {
+    charIndex--;
+    typingElement.textContent =
+      currentRole.substring(0, charIndex);
+
+    if (charIndex === 0) {
+      deleting = false;
+      roleIndex = (roleIndex + 1) % roles.length;
+    }
+  }
+
+  setTimeout(typeEffect, deleting ? 45 : 85);
+}
+
+typeEffect();
+</script>
+
 
 
     </body>
