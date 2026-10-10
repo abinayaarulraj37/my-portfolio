@@ -124,3 +124,34 @@ footer p{
     color: #94a3b8;
     font-size: 14px;
 }
+/* Electric blue theme */
+:root {
+    --electric-blue: #3984FF;
+    --glow-blue: #00A8FF;
+}
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+h1 {
+    text-shadow: 0 0 12px rgba(57, 132, 255, 0.6);
+}
+
+h2 {
+    text-shadow: 0 0 8px rgba(0, 168, 255, 0.35);
+}
+
+a, button {
+    transition: color 0.3s ease,
+                box-shadow 0.3s ease,
+                transform 0.3s ease;
+}
+
+a:hover {
+    color: var(--glow-blue);
+}
+
+button:hover {
+    box-shadow: 0 0 18px rgba(0, 168, 255, 0.45);
+    transform: translateY(-2px);
+}
